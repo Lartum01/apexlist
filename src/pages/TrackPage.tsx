@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { LeaderboardTable } from "../components/LeaderboardTable";
+import { TrackName } from "../components/TrackName";
 import { TrackNav } from "../components/TrackNav";
 import { WorldRecordBox } from "../components/WorldRecordBox";
 import { cars } from "../data/cars";
@@ -37,7 +38,9 @@ export function TrackPage() {
 
   return (
     <div className="page">
-      <h1>{track.name}</h1>
+      <h1>
+        <TrackName name={track.name} countryCode={track.countryCode} />
+      </h1>
       <p className="lede">
         Laps are sorted fastest to slowest. Points use this car&apos;s independent World Record.
       </p>
