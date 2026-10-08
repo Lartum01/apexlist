@@ -5,8 +5,8 @@ export const GOOGLE_FORM_URL =
 // Edit these guidelines without changing the submission page layout.
 export const submissionGuidelines = [
   "Include your driver name, track, car, and lap time.",
-  "Enter lap times in m:ss.mmm format, for example 1:23.456.",
+  "Enter lap times in M:SS.mmm format, for example 1:23.456.",
   "Choose the car used for the lap so it is compared against that car's World Record.",
-  "Add a YouTube video link. it is NOT optional. In-game GUI must not be covered.",
+  "Add a proof link. it is NOT optional. In-game GUI must not be covered, and the car must be visible.",
   "Check that your track and car selection match the submitted lap.",
 ];
