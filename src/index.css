@@ -187,6 +187,22 @@ a:hover {
   font-weight: 400;
 }
 
+.track-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.track-flag {
+  display: inline-block;
+  width: 1.33em;
+  height: 1em;
+  font-size: 0.95em;
+  object-fit: cover;
+  vertical-align: -0.08em;
+  line-height: 1;
+}
+
 .track-card .meta {
   color: var(--muted);
   font-size: 12px;
