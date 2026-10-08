@@ -11,8 +11,8 @@ import {
 } from "./leaderboard";
 
 const testTracks: Track[] = [
-  { id: 1, name: "Monaco", slug: "monaco" },
-  { id: 2, name: "Spa", slug: "spa" },
+  { id: 1, name: "Monaco", slug: "monaco", countryCode: "usa" },
+  { id: 2, name: "Spa", slug: "spa", countryCode: "usa" },
 ];
 
 const testCars: Car[] = [
@@ -126,7 +126,9 @@ describe("leaderboard", () => {
   });
 
   it("uses renamed car and track names from data files", () => {
-    const renamedTracks: Track[] = [{ id: 1, name: "Circuit de Monaco", slug: "monaco" }];
+    const renamedTracks: Track[] = [
+      { id: 1, name: "Circuit de Monaco", slug: "monaco", countryCode: "usa" },
+    ];
     const renamedCars: Car[] = [{ id: "car-1", name: "Red Prototype", multiplier: 1 }];
     const laps: Lap[] = [{ driver: "Alex", track: "monaco", car: "car-1", time: "1:23.456" }];
     const rows = rankTrackLaps(getValidLaps(laps, renamedTracks, renamedCars), "car-1");
