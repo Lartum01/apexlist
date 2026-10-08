@@ -55,5 +55,12 @@ export const laps: Lap[] = [
     car: "f26",
     time: "1:06.180",
     youtube: "https://medal.tv/games/roblox/clips/nGwLwg4nk7cd5OwHR?invite=cr-MSwzMjMsNzgxNjk0NTIw",
+  },
+  {
+    driver: "TEST3",
+    track: "zandvoort",
+    car: "f26",
+    time: "1:06.999",
+    youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   }
 ];
