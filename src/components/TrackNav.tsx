@@ -22,14 +22,21 @@ export function TrackNav() {
             key={track.slug}
             className="track-card"
             to={`/tracks/${track.slug}`}
-            // Only set the image URL inline; sizing/positioning is handled in CSS.
-            style={{ backgroundImage: `url(${bgUrl})` }}
           >
-            <div className="name">
-              <TrackName name={track.name} countryCode={track.countryCode} />
+            <div
+              className="track-card-image"
+              style={{ backgroundImage: `url(${bgUrl})` }}
+            >
+              <div className="track-card-overlay">
+                <div className="track-card-name">
+                  <TrackName name={track.name} countryCode={track.countryCode} />
+                </div>
+              </div>
             </div>
-            <div className="meta">
-              {carCount ? `${carCount} car${carCount === 1 ? "" : "s"} with laps` : "No laps yet"}
+            <div className="track-card-info">
+              <div className="meta">
+                {carCount ? `${carCount} car${carCount === 1 ? "" : "s"} with laps` : "No laps yet"}
+              </div>
             </div>
           </Link>
         );
