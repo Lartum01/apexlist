@@ -13,8 +13,18 @@ export function TrackNav() {
         const carCount = new Set(
           lapsForTrack(validLaps, track.slug).map((lap) => lap.car)
         ).size;
+
+        // Adjust extension here if you use .jpg or another format.
+        const bgUrl = `/bgimg/${track.slug}.png`;
+
         return (
-          <Link key={track.slug} className="track-card" to={`/tracks/${track.slug}`}>
+          <Link
+            key={track.slug}
+            className="track-card"
+            to={`/tracks/${track.slug}`}
+            // Only set the image URL inline; sizing/positioning is handled in CSS.
+            style={{ backgroundImage: `url(${bgUrl})` }}
+          >
             <div className="name">
               <TrackName name={track.name} countryCode={track.countryCode} />
             </div>
