@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
+import { TrackName } from "../components/TrackName";
 import { laps } from "../data/laps";
 import { getGlobalLeaderboard } from "../utils/leaderboard";
 
@@ -45,11 +46,16 @@ export function GlobalPage() {
                 {row.driver} — Total: {row.pointsLabel}
               </h2>
               <div className="track-pills">
-                {row.perTrack.filter((track) => track.points !== 0).map((track) => (
-                  <Link key={track.slug} className="pill" to={`/tracks/${track.slug}`}>
-                    {track.name}: {track.pointsLabel}
-                  </Link>
-                ))}
+                {row.perTrack
+                  .filter((track) => track.points !== 0)
+                  .map((track) => {
+                    return (
+                      <Link key={track.slug} className="pill" to={`/tracks/${track.slug}`}>
+                        <TrackName name={track.name} countryCode={track.countryCode} />
+                        : {track.pointsLabel}
+                      </Link>
+                    );
+                  })}
               </div>
             </section>
           ))}
