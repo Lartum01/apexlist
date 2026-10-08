@@ -19,7 +19,7 @@ export function Layout({ children }: { children: ReactNode }) {
         </nav>
       </header>
       <main>{children}</main>
-      <footer className="site-footer">The World Record is the fastest submitted lap.</footer>
+      <footer className="site-footer">The Formula Apex Laptime List is not affiliated with Formula Apex. This is just a project made for fun.</footer>
     </div>
   );
 }
