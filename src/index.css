@@ -170,17 +170,45 @@ a:hover {
   gap: 8px;
 }
 
+/* Track card: includes background-image behaviour so images fit without stretching */
 .track-card {
-  display: block;
-  background: var(--bg-raised);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;         /* for overlay pseudo-element */
+  overflow: hidden;           /* crop any overflow */
+  background-color: var(--bg-raised); /* fallback color if image missing */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;   /* scale to fit inside without stretching */
   border: 1px solid var(--border);
   padding: 10px 12px;
   color: var(--text);
+  min-height: 96px;           /* visible area for image — adjust to taste */
+  transition: border-color 120ms ease, transform 160ms ease;
 }
 
 .track-card:hover {
   text-decoration: none;
   border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* subtle overlay to keep text readable on bright images */
+.track-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(transparent 40%, rgba(16,17,20,0.6));
+  opacity: 1;
+}
+
+/* make sure text sits above the overlay */
+.track-card .name,
+.track-card .meta {
+  position: relative;
+  z-index: 1;
 }
 
 .track-card .name {
@@ -389,5 +417,11 @@ tbody tr:nth-child(even) {
 
   .page h1 {
     font-size: 22px;
+  }
+
+  /* reduce card height on small screens */
+  .track-card {
+    min-height: 72px;
+    padding: 8px 10px;
   }
 }
