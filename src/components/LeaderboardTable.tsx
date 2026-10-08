@@ -1,4 +1,4 @@
-import type { RankedLap } from "../utils/leaderboard";
+*import type { RankedLap } from "../utils/leaderboard";
 
 export function LeaderboardTable({ rows }: { rows: RankedLap[] }) {
   if (rows.length === 0) {
@@ -15,7 +15,7 @@ export function LeaderboardTable({ rows }: { rows: RankedLap[] }) {
             <th>Car</th>
             <th>Lap Time</th>
             <th>Points</th>
-            <th>Video</th>
+            <th>Link</th>
           </tr>
         </thead>
         <tbody>
