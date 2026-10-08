@@ -29,18 +29,18 @@ export type Lap = {
 
 export const laps: Lap[] = [
   {
-    driver: "TEST1",
+    driver: "Lartum",
     track: "miami",
-    car: "f26",
-    time: "9:59.999",
-    youtube: "https://youtu.be/dQw4w9WgXcQ",
+    car: "f23",
+    time: "1:22.599",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1461589229435093137",
   },
   {
-    driver: "TEST2",
+    driver: "Chuy Junco",
     track: "czechia",
     car: "f25",
-    time: "9:59.999",
-    youtube: "https://youtu.be/dQw4w9WgXcQ",
+    time: "1:06.744",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1546004501981298788",
   },
   {
     driver: "BrMaster9",
