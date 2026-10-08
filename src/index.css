@@ -166,11 +166,11 @@ a:hover {
 
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
 }
 
-/* Track card: flexbox layout with separated image section and text section */
+/* Track card: image with overlaid text and info section below */
 .track-card {
   display: flex;
   flex-direction: column;
@@ -189,34 +189,66 @@ a:hover {
   transform: translateY(-3px);
 }
 
-/* Image section: fit to width, show crop at top */
+/* Large image section with overlay */
 .track-card-image {
   width: 100%;
-  height: 80px;  /* adjust to taste */
+  height: 180px;
   overflow: hidden;
   background-color: var(--bg-raised);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;  /* fit to width, crop top/bottom */
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-/* Text section: name and meta below the image */
+/* Overlay with gradient for text readability */
+.track-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 16px 14px;
+  z-index: 1;
+}
+
+/* Track name positioned absolutely on image */
+.track-card-name {
+  width: 100%;
+}
+
+.track-card-name .track-name {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Text section below image */
 .track-card-info {
-  padding: 10px 12px;
+  padding: 12px 14px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.track-card .name {
-  font-weight: 400;
-}
-
-.track-name {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45em;
+.track-card .meta {
+  color: var(--muted);
+  font-size: 12px;
+  font-family: var(--font-secondary);
 }
 
 .track-flag {
@@ -227,13 +259,7 @@ a:hover {
   object-fit: cover;
   vertical-align: -0.08em;
   line-height: 1;
-}
-
-.track-card .meta {
-  color: var(--muted);
-  font-size: 12px;
-  font-family: var(--font-secondary);
-  margin-top: 4px;
+  flex-shrink: 0;
 }
 
 .wr-box {
@@ -408,17 +434,38 @@ tbody tr:nth-child(even) {
   padding: 4px 8px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .track-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .track-card-image {
+    height: 140px;
+  }
+
+  .track-card-name .track-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .track-card-image {
+    height: 120px;
+  }
+
+  .track-card-name .track-name {
+    font-size: 16px;
+  }
+
   .wr-time {
     font-size: 28px;
   }
 
   .page h1 {
     font-size: 22px;
-  }
-
-  /* reduce image height on small screens */
-  .track-card-image {
-    height: 60px;
   }
 }
