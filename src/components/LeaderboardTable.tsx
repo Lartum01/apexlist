@@ -1,4 +1,4 @@
-*import type { RankedLap } from "../utils/leaderboard";
+import type { RankedLap } from "../utils/leaderboard";
 
 export function LeaderboardTable({ rows }: { rows: RankedLap[] }) {
   if (rows.length === 0) {
