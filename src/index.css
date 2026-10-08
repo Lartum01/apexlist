@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Designer";
+  src: url("/fonts/Designer.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url("/fonts/Coolvetica%20Rg.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --bg: #101114;
   --bg-raised: #17181c;
@@ -12,6 +28,8 @@
   --silver: #c5c8ce;
   --bronze: #c47a48;
   --danger: #d36b6b;
+  --font-family: "Designer", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-secondary: "Coolvetica", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -28,7 +46,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -60,7 +79,6 @@ a:hover {
 
 .brand {
   color: var(--text);
-  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 18px;
@@ -73,8 +91,10 @@ a:hover {
 
 .primary-nav {
   display: flex;
+  align-items: center;
   gap: 16px;
   font-size: 14px;
+  font-family: var(--font-secondary);
 }
 
 .primary-nav a.active {
@@ -82,8 +102,21 @@ a:hover {
 }
 
 .primary-nav .submit-nav-link {
-  color: var(--accent);
-  font-weight: 700;
+  display: inline-block;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+  padding: 4px 10px;
+  text-decoration: none;
+}
+
+.primary-nav .submit-nav-link.active {
+  color: var(--bg);
+}
+
+.primary-nav .submit-nav-link:hover {
+  text-decoration: none;
+  filter: brightness(1.08);
 }
 
 .submission-guidelines {
@@ -101,6 +134,7 @@ a:hover {
   border: 1px solid var(--accent);
   background: var(--accent);
   color: var(--bg);
+  font-family: var(--font-secondary);
   font-weight: 700;
   padding: 10px 16px;
 }
@@ -113,16 +147,19 @@ a:hover {
 .submission-note {
   color: var(--muted);
   font-size: 12px;
+  font-family: var(--font-secondary);
   margin: 8px 0 20px;
 }
 
 .page h1 {
   margin: 0 0 8px;
   font-size: 28px;
+  font-weight: 400;
 }
 
 .lede {
   color: var(--muted);
+  font-family: var(--font-secondary);
   margin: 0 0 20px;
   max-width: 70ch;
 }
@@ -147,12 +184,13 @@ a:hover {
 }
 
 .track-card .name {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .track-card .meta {
   color: var(--muted);
   font-size: 12px;
+  font-family: var(--font-secondary);
   margin-top: 4px;
 }
 
@@ -166,19 +204,21 @@ a:hover {
 .wr-label {
   color: var(--accent);
   font-size: 12px;
+  font-family: var(--font-secondary);
   letter-spacing: 0.16em;
   font-weight: 700;
 }
 
 .wr-time {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.02em;
   margin: 4px 0;
 }
 
 .wr-meta {
   color: var(--muted);
+  font-family: var(--font-secondary);
 }
 
 .car-tabs {
@@ -197,6 +237,7 @@ a:hover {
   padding: 6px 10px;
   font: inherit;
   font-size: 13px;
+  font-family: var(--font-secondary);
   cursor: pointer;
 }
 
@@ -209,6 +250,7 @@ a:hover {
 .empty {
   border: 1px dashed var(--border);
   color: var(--muted);
+  font-family: var(--font-secondary);
   padding: 24px;
   text-align: center;
 }
@@ -236,6 +278,7 @@ th {
   background: #121317;
   color: var(--muted);
   font-size: 11px;
+  font-family: var(--font-secondary);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -249,7 +292,6 @@ tbody tr:nth-child(even) {
 }
 
 .rank {
-  font-weight: 700;
   width: 52px;
 }
 
@@ -268,7 +310,6 @@ tbody tr:nth-child(even) {
 .time,
 .points {
   font-variant-numeric: tabular-nums;
-  font-weight: 600;
 }
 
 .video-link {
@@ -276,6 +317,7 @@ tbody tr:nth-child(even) {
   border: 1px solid var(--border);
   padding: 2px 8px;
   font-size: 12px;
+  font-family: var(--font-secondary);
   color: var(--text);
 }
 
@@ -287,6 +329,7 @@ tbody tr:nth-child(even) {
 
 .muted {
   color: var(--muted);
+  font-family: var(--font-secondary);
 }
 
 .site-footer {
@@ -295,6 +338,7 @@ tbody tr:nth-child(even) {
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 12px;
+  font-family: var(--font-secondary);
 }
 
 .global-detail {
@@ -305,6 +349,7 @@ tbody tr:nth-child(even) {
 .global-detail h2 {
   font-size: 16px;
   margin: 28px 0 8px;
+  font-weight: 400;
 }
 
 .track-pills {
@@ -317,6 +362,7 @@ tbody tr:nth-child(even) {
   background: var(--bg-raised);
   border: 1px solid var(--border);
   font-size: 12px;
+  font-family: var(--font-secondary);
   padding: 4px 8px;
 }
 
