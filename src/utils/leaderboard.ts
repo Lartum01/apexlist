@@ -1,6 +1,6 @@
 import { cars, type Car } from "../data/cars";
 import { type Lap } from "../data/laps";
-import { tracks, type Track } from "../data/tracks";
+import { tracks, type CountryCode, type Track } from "../data/tracks";
 import { calculatePoints, formatPoints } from "./scoring";
 import { parseTimeToMs } from "./time";
 
@@ -35,7 +35,13 @@ export type GlobalRow = {
   driver: string;
   totalPoints: number;
   pointsLabel: string;
-  perTrack: { slug: string; name: string; points: number; pointsLabel: string }[];
+  perTrack: {
+    slug: string;
+    name: string;
+    countryCode: CountryCode;
+    points: number;
+    pointsLabel: string;
+  }[];
 };
 
 function youtubeOrNull(value: string | undefined): string | null {
@@ -193,6 +199,7 @@ export function getGlobalLeaderboard(
       perTrack.push({
         slug: track.slug,
         name: track.name,
+        countryCode: track.countryCode,
         points: trackPoints,
         pointsLabel: formatPoints(trackPoints),
       });
