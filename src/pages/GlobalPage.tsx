@@ -11,8 +11,7 @@ export function GlobalPage() {
     <div className="page">
       <h1>Global Leaderboard</h1>
       <p className="lede">
-        Total points are the sum of each driver's best score on every track. Missing a track
-        counts as 0.0.
+        Total points are the sum of each driver's best score on every track.
       </p>
 
       {rows.length === 0 ? (
