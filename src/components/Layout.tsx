@@ -17,7 +17,7 @@ export function Layout({ children }: { children: ReactNode }) {
             Submit a Time
           </NavLink>
           <a
-            href="https://discord.gg/yourserver"
+            href="https://discord.gg/JyWzXTf7EE"
             target="_blank"
             rel="noopener noreferrer"
             className="discord-link"
