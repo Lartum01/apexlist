@@ -22,7 +22,7 @@
   --border: #2b2d33;
   --text: #e6e6e6;
   --muted: #9aa0a8;
-  --accent: #d4c05a;
+  --accent: #CCCCCC;
   --link: #7eb6ff;
   --gold: #e2c15a;
   --silver: #c5c8ce;
@@ -117,6 +117,23 @@ a:hover {
 .primary-nav .submit-nav-link:hover {
   text-decoration: none;
   filter: brightness(1.08);
+}
+
+.discord-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+  transition: color 120ms ease;
+}
+
+.discord-link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.discord-link svg {
+  width: 24px;
+  height: 24px;
 }
 
 .submission-guidelines {
