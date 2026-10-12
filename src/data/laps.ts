@@ -118,5 +118,12 @@ export const laps: Lap[] = [
     car: "f25",
     time: "1:06.966",
     youtube: "https://media.discordapp.net/attachments/658830680033329152/1556659575334117396/image.png?backend=b2&ex=6acd8974&is=6acc37f4&hm=eca0c7972878e2c30f1feb419dcc6a087ab087793479db59af118e30f44f7709&=&format=webp&quality=lossless&width=1536&height=638",
+  },
+  {
+    driver: "TRAINING5659",
+    track: "winterpark",
+    car: "f25",
+    time: "1:20.877",
+    youtube: "https://media.discordapp.net/attachments/1481803534981927163/1559121429977636955/image.png?ex=6acdec7b&is=6acc9afb&hm=11b53c4c5f79cbd0591fa78a3a061b51dd1a2d4ae91cb215f9598169130d8736&=&format=webp&quality=lossless&width=640&height=360",
   }
 ];
