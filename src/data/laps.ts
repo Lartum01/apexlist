@@ -163,13 +163,6 @@ export const laps: Lap[] = [
   },
   {
     driver: "Phobizo",
-    track: "vegas",
-    car: "f16",
-    time: "1:28.013",
-    youtube: "https://discord.com/channels/1558943071394336909/1558943609275941025/1559937746871783564",
-  },
-  {
-    driver: "Phobizo",
     track: "qatar",
     car: "f16",
     time: "1:28.207",
