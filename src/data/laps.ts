@@ -377,5 +377,5 @@ export const laps: Lap[] = [
     car: "f92",
     time: "1.18.515",
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1546097005703598161",
-  },
+  }
 ];
