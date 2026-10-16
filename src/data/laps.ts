@@ -79,13 +79,6 @@ export const laps: Lap[] = [
   },
   {
     driver: "bearlinee81",
-    track: "miami",
-    car: "f26",
-    time: "1:23.287",
-    youtube: "https://medal.tv/games/roblox/clips/nHikt9HsXzeaGWzSE",
-  },
-  {
-    driver: "bearlinee81",
     track: "australia",
     car: "f26",
     time: "1:18.195",
