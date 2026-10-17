@@ -363,5 +363,26 @@ export const laps: Lap[] = [
     car: "f92",
     time: "1:18.515",
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1546097005703598161",
+  },
+  {
+    driver: "vm0reo",
+    track: "montreal",
+    car: "f25",
+    time: "1:15.163",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1560903390865657876",
+  },
+  {
+    driver: "Skypro098765",
+    track: "australia",
+    car: "f26",
+    time: "1:18.021",
+    youtube: "https://discord.com/channels/1360433303814934588/1360434153799160031/1560923409737711676",
+  },
+  {
+    driver: "vm0reo",
+    track: "wynford",
+    car: "f25",
+    time: "1:03:589",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1560935330037633114",
   }
 ];
