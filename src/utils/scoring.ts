@@ -5,7 +5,7 @@
 //
 // Change WR_POINTS or POINT_LOSS_PER_MS to adjust the system.
 
-export const WR_POINTS = 100;
+export const WR_POINTS = 500;
 export const POINT_LOSS_PER_MS = 0.1;
 
 export function calculatePoints(
