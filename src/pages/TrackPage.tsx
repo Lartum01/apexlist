@@ -1,12 +1,15 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { LeaderboardTable } from "../components/LeaderboardTable";
+import { TrackHero } from "../components/TrackHero";
+import { TrackInfo } from "../components/TrackInfo";
 import { TrackName } from "../components/TrackName";
 import { TrackNav } from "../components/TrackNav";
 import { WorldRecordBox } from "../components/WorldRecordBox";
 import { cars } from "../data/cars";
 import { laps } from "../data/laps";
 import { getTrackBySlug } from "../data/tracks";
+import trackMeta from "../data/trackMeta";
 import { getValidLaps, getWorldRecord, lapsForTrack, rankTrackLaps } from "../utils/leaderboard";
 
 export function TrackPage() {
@@ -36,14 +39,14 @@ export function TrackPage() {
     );
   }
 
+  const meta = trackMeta[track.slug];
+
   return (
     <div className="page">
-      <h1>
-        <TrackName name={track.name} countryCode={track.countryCode} />
-      </h1>
-      <p className="lede">
-        Laps are sorted fastest to slowest. Points use this car&apos;s independent World Record.
-      </p>
+      <TrackHero track={track} />
+
+      <TrackInfo track={track} location={meta?.location} ratings={meta?.ratings} />
+
       <div className="car-tabs" role="group" aria-label="Filter leaderboard by car">
         {cars.map((car) => (
           <button
@@ -57,6 +60,7 @@ export function TrackPage() {
           </button>
         ))}
       </div>
+
       {selectedCar && <WorldRecordBox record={record} carName={selectedCar.name} />}
       <LeaderboardTable rows={rows} />
       <h2 className="section-title">All tracks</h2>

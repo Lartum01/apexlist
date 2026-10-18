@@ -28,6 +28,22 @@ const trackMeta: Record<
     location: "Florida, USA",
     ratings: { bumps: 2, speed: 4, length: 4, payout: 3 },
   },
+  silverstone: {
+    location: "England, United Kingdom",
+    ratings: { bumps: 2, speed: 5, length: 5, payout: 4 },
+  },
+  monza: {
+    location: "Lombardy, Italy",
+    ratings: { bumps: 1, speed: 5, length: 3, payout: 4 },
+  },
+  vegas: {
+    location: "Nevada, USA",
+    ratings: { bumps: 2, speed: 5, length: 4, payout: 5 },
+  },
+  qatar: {
+    location: "Doha, Qatar",
+    ratings: { bumps: 3, speed: 4, length: 5, payout: 4 },
+  },
 };
 
 export default trackMeta;
