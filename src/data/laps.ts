@@ -28,20 +28,311 @@ export type Lap = {
 };
 
 export const laps: Lap[] = [
+// ###################################################################################################
+// ###################################################################################################
+//  /$$$$$$$$ /$$   /$$  /$$$$$$  /$$$$$$$$ /$$             /$$      /$$ /$$$$$$$           
+// | $$_____/| $$  / $$ /$$__  $$| $$_____/| $$            | $$  /$ | $$| $$__  $$          
+// | $$      |  $$/ $$/| $$  \__/| $$      | $$            | $$ /$$$| $$| $$  \ $$  /$$$$$$$
+// | $$$$$    \  $$$$/ | $$      | $$$$$   | $$            | $$/$$ $$ $$| $$$$$$$/ /$$_____/
+// | $$__/     >$$  $$ | $$      | $$__/   | $$            | $$$$_  $$$$| $$__  $$|  $$$$$$ 
+// | $$       /$$/\  $$| $$    $$| $$      | $$            | $$$/ \  $$$| $$  \ $$ \____  $$
+// | $$$$$$$$| $$  \ $$|  $$$$$$/| $$$$$$$$| $$$$$$$$      | $$/   \  $$| $$  | $$ /$$$$$$$/
+// |________/|__/  |__/ \______/ |________/|________/      |__/     \__/|__/  |__/|_______/ 
+// ###################################################################################################
+// ###################################################################################################
+
+//   ___   ___ ___   __  
+//  |__ \ / _ \__ \ / /  
+//     ) | | | | ) / /_  
+//    / /| | | |/ / '_ \ 
+//   / /_| |_| / /| (_) |
+//  |____|\___/____\___/ 
   {
-    driver: "Lartum",
-    track: "miami",
-    car: "f23",
-    time: "1:22.599",
-    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1461589229435093137",
+    driver: "Pokonald0",
+    track: "indy",
+    car: "f26",
+    time: "1:11.709",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1538515207859474572",
   },
   {
-    driver: "Chuy Junco",
+    driver: "Pokonald0",
+    track: "wynford",
+    car: "f26",
+    time: "1:01.268",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1519638876224749628",
+  },
+  {
+    driver: "Thax1905",
+    track: "hockenheim",
+    car: "f26",
+    time: "1:01.333",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1499765223131975843",
+  },
+  {
+    driver: "Pedro098T",
+    track: "turkey",
+    car: "f26",
+    time: "1:22.599",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1561373302520418424",
+  },
+  {
+    driver: "Pokonald0",
+    track: "silverstone",
+    car: "f26",
+    time: "1:25.042",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1555608932771303535",
+  },
+  {
+    driver: "Thax1905",
+    track: "baku",
+    car: "f26",
+    time: "1:14.544",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1508107233362317372",
+  },
+  {
+    driver: "Thax1905",
+    track: "czechia",
+    car: "f26",
+    time: "1:07.902",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1505552044810043453",
+  },
+  {
+    driver: "Pokonald0",
+    track: "winterpark",
+    car: "f26",
+    time: "1:22.384",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1517162184843595846",
+  },
+  {
+    driver: "WYSYRB",
+    track: "mexico",
+    car: "f26",
+    time: "1:15.103",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1552378440483733607",
+  },
+  {
+    driver: "Pedro098T",
+    track: "zandvoort",
+    car: "f26",
+    time: "1:05.972",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1545890779929509940",
+  },
+  {
+    driver: "Thax1905",
+    track: "saitama",
+    car: "f26",
+    time: "1:08.055",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1533464981356417034",
+  },
+  {
+    driver: "Pokonald0",
+    track: "france",
+    car: "f26",
+    time: "1:06.447",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1517921427490341084",
+  },
+  {
+    driver: "Pokonald0",
+    track: "miami",
+    car: "f26",
+    time: "1:22.154",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1517921427490341084",
+  },
+  {
+    driver: "Pedro098T",
+    track: "vegas",
+    car: "f26",
+    time: "1:24.598",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1551241131487137812",
+  },
+  {
+    driver: "Pokonald0",
+    track: "qatar",
+    car: "f26",
+    time: "1:24.903",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1553834022247989318",
+  },
+  {
+    driver: "Thax1905",
+    track: "australia",
+    car: "f26",
+    time: "1:17.253",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1550789458411134986",
+  },
+  {
+    driver: "Pokonald0",
+    track: "monza",
+    car: "f26",
+    time: "1:20.535",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1533815991597797407",
+  },
+  {
+    driver: "Pokonald0",
+    track: "abudhabi",
+    car: "f26",
+    time: "1:22.494",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1552931190460252190",
+  },
+  {
+    driver: "BrMaster9",
+    track: "montreal",
+    car: "f26",
+    time: "1:12.967",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1553065345302929478",
+  },
+
+//   ___   ___ ___  _____ 
+//  |__ \ / _ \__ \| ____|
+//     ) | | | | ) | |__  
+//    / /| | | |/ /|___ \ 
+//   / /_| |_| / /_ ___) |
+//  |____|\___/____|____/ 
+                       
+  {
+    driver: "Pokonald0",
+    track: "indy",
+    car: "f25",
+    time: "1:08.906",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1541855630472642674",
+  },
+  {
+    driver: "Pokonald0",
+    track: "wynford",
+    car: "f25",
+    time: "0:59.825",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1552915959604576307",
+  },
+  {
+    driver: "Yuushi241",
+    track: "hockenheim",
+    car: "f25",
+    time: "1:00.171",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1527163818579460238",
+  },
+  {
+    driver: "Pokonald0",
+    track: "turkey",
+    car: "f25",
+    time: "1:06.864",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1560927102704812104",
+  },
+  {
+    driver: "Pokonald0",
+    track: "silverstone",
+    car: "f25",
+    time: "1:22.587",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1541855630472642674",
+  },
+  {
+    driver: "Pokonald0",
+    track: "baku",
+    car: "f25",
+    time: "1:12.243",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1548666346902921226",
+  },
+  {
+    driver: "sonicveneno",
     track: "czechia",
     car: "f25",
     time: "1:06.744",
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1546004501981298788",
   },
+  {
+    driver: "WYSYRB",
+    track: "winterpark",
+    car: "f25",
+    time: "1:19.254",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1486021983954145321",
+  },
+  {
+    driver: "DungeonFanatics",
+    track: "mexico",
+    car: "f25",
+    time: "1:13.046",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1490349799851954377",
+  },
+  {
+    driver: "DungeonFanatics",
+    track: "zandvoort",
+    car: "f25",
+    time: "1:03.916",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1502700500246724770",
+  },
+  {
+    driver: "Pokonald0",
+    track: "saitama",
+    car: "f25",
+    time: "1:06.843",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1533464981356417034",
+  },
+  {
+    driver: "Pokonald0",
+    track: "france",
+    car: "f25",
+    time: "1:05.526",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1542983223057850421",
+  },
+  {
+    driver: "Pokonald0",
+    track: "miami",
+    car: "f25",
+    time: "1:20.857",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1541855675003572355",
+  },
+  {
+    driver: "Pokonald0",
+    track: "vegas",
+    car: "f25",
+    time: "1:22.495",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1536060391912902716",
+  },
+  {
+    driver: "Pedro098T",
+    track: "qatar",
+    car: "f25",
+    time: "1:21.468",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1490054757811884145",
+  },
+  {
+    driver: "Yuushi241",
+    track: "australia",
+    car: "f25",
+    time: "1:14.905",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1522115358096359447",
+  },
+  {
+    driver: "Pokonald0",
+    track: "monza",
+    car: "f25",
+    time: "1:18.512",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1533815991597797407",
+  },
+  {
+    driver: "Pokonald0",
+    track: "abudhabi",
+    car: "f25",
+    time: "1:20.071",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1537046275349024769",
+  },
+  {
+    driver: "BrMaster9",
+    track: "montreal",
+    car: "f25",
+    time: "1:10.838",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1543010269553360916",
+  },
+// ###################################################################################################
+// ###################################################################################################
+//   /$$$$$$  /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$   /$$$$$$ 
+//  /$$__  $$|__  $$__/| $$  | $$| $$_____/| $$__  $$ /$$__  $$
+// | $$  \ $$   | $$   | $$  | $$| $$      | $$  \ $$| $$  \__/
+// | $$  | $$   | $$   | $$$$$$$$| $$$$$   | $$$$$$$/|  $$$$$$ 
+// | $$  | $$   | $$   | $$__  $$| $$__/   | $$__  $$ \____  $$
+// | $$  | $$   | $$   | $$  | $$| $$      | $$  \ $$ /$$  \ $$
+// |  $$$$$$/   | $$   | $$  | $$| $$$$$$$$| $$  | $$|  $$$$$$/
+//  \______/    |__/   |__/  |__/|________/|__/  |__/ \______/ 
+// ###################################################################################################
+// ###################################################################################################
   {
     driver: "BrMaster9",
     track: "vegas",
@@ -426,5 +717,19 @@ export const laps: Lap[] = [
     car: "f21",
     time: "1:21.615",
     youtube: "https://discord.com/channels/1558943071394336909/1558943609275941025/1561130134768062564",
+  },
+  {
+    driver: "Xz_03309",
+    track: "abudhabi",
+    car: "f21",
+    time: "1:21.615",
+    youtube: "https://discord.com/channels/1558943071394336909/1558943609275941025/1561130134768062564",
+  },
+  {
+    driver: "vm0reo",
+    track: "indy",
+    car: "f25",
+    time: "1:11:422",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1561451793370710028",
   },
 ];
