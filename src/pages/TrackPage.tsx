@@ -8,9 +8,6 @@ import { cars } from "../data/cars";
 import { laps } from "../data/laps";
 import { getTrackBySlug } from "../data/tracks";
 import { getValidLaps, getWorldRecord, lapsForTrack, rankTrackLaps } from "../utils/leaderboard";
-import { TrackHero } from "../components/TrackHero";
-import { TrackInfo } from "../components/TrackInfo";
-import trackMeta from "../data/trackMeta";
 
 export function TrackPage() {
   const { slug } = useParams();
@@ -39,14 +36,14 @@ export function TrackPage() {
     );
   }
 
-  const meta = trackMeta[track.slug];
-
   return (
     <div className="page">
-      <TrackHero track={track} />
-
-      <TrackInfo track={track} location={meta?.location} ratings={meta?.ratings} />
-
+      <h1>
+        <TrackName name={track.name} countryCode={track.countryCode} />
+      </h1>
+      <p className="lede">
+        Laps are sorted fastest to slowest. Points use this car&apos;s independent World Record.
+      </p>
       <div className="car-tabs" role="group" aria-label="Filter leaderboard by car">
         {cars.map((car) => (
           <button
@@ -60,7 +57,6 @@ export function TrackPage() {
           </button>
         ))}
       </div>
-
       {selectedCar && <WorldRecordBox record={record} carName={selectedCar.name} />}
       <LeaderboardTable rows={rows} />
       <h2 className="section-title">All tracks</h2>
