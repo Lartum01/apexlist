@@ -276,6 +276,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  align-self: center;
 }
 
 .track-location-panel {
