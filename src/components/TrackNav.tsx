@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { TrackName } from "./TrackName";
-import { tracks } from "../data/tracks";
+import { getTrackBannerUrl, tracks } from "../data/tracks";
 import { laps } from "../data/laps";
 import { getValidLaps, lapsForTrack } from "../utils/leaderboard";
 
@@ -14,8 +14,7 @@ export function TrackNav() {
           lapsForTrack(validLaps, track.slug).map((lap) => lap.car)
         ).size;
 
-        // Adjust extension here if you use .jpg or another format.
-        const bgUrl = `/bgimg/${track.slug}.png`;
+        const bgUrl = getTrackBannerUrl(track);
 
         return (
           <Link

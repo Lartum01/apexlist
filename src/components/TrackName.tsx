@@ -46,9 +46,6 @@ export function TrackName({
   countryCode: CountryCode;
 }) {
   return (
-    <span className="track-name">
-      <img className="track-flag" src={countryFlags[countryCode]} alt={getCountryName(countryCode)} />
-      {name}
-    </span>
+    <span className="track-name"><img className="track-flag" src={countryFlags[countryCode]} alt="" aria-hidden="true" title={getCountryName(countryCode)} />{name}</span>
   );
 }

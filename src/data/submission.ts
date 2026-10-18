@@ -1,6 +1,6 @@
 // Replace this placeholder with the published Google Forms URL.
 export const GOOGLE_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc6TKkKVef9-ZuNi4x7KuNUpBO-ye_qA72wp_q2VP981XzM8g/viewform?usp=publish-editor";
+  "https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?usp=sf_link";
 
 // Edit these guidelines without changing the submission page layout.
 export const submissionGuidelines = [

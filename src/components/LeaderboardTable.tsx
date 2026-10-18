@@ -34,7 +34,7 @@ export function LeaderboardTable({ rows }: { rows: RankedLap[] }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Link
+                    Video
                   </a>
                 ) : (
                   <span className="muted">-</span>
