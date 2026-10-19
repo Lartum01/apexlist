@@ -69,11 +69,11 @@ export const laps: Lap[] = [
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1499765223131975843",
   },
   {
-    driver: "Pedro098T",
+    driver: "Pokonald0",
     track: "turkey",
     car: "f26",
-    time: "1:22.599",
-    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1561373302520418424",
+    time: "1:09.392",
+    youtube: "https://cdn.discordapp.com/attachments/658830680033329152/1561688059395711056/image.png?ex=6ad742d8&is=6ad5f158&hm=aa25d6ee8f126713085a8c25640077340139034134960b1a1d0e622d95598d8c&",
   },
   {
     driver: "Pokonald0",
@@ -111,11 +111,11 @@ export const laps: Lap[] = [
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1552378440483733607",
   },
   {
-    driver: "Pedro098T",
+    driver: "Pokonal0",
     track: "zandvoort",
     car: "f26",
-    time: "1:05.972",
-    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1545890779929509940",
+    time: "1:05.915",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1561698175864283157",
   },
   {
     driver: "Thax1905",
@@ -139,11 +139,11 @@ export const laps: Lap[] = [
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1517921427490341084",
   },
   {
-    driver: "Pedro098T",
+    driver: "Pokonald0",
     track: "vegas",
     car: "f26",
-    time: "1:24.598",
-    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1551241131487137812",
+    time: "1:24.477",
+    youtube: "https://cdn.discordapp.com/attachments/658830680033329152/1561702325779955732/image.png?ex=6ad75021&is=6ad5fea1&hm=43723e7cb36778ec0d7a92646e74b96965d521a614ad5d535ab34b6dd411d26b&",
   },
   {
     driver: "Pokonald0",
@@ -624,7 +624,7 @@ export const laps: Lap[] = [
     driver: "przemek10_9",
     track: "miami",
     car: "f26",
-    time: "1:21.928",
+    time: "1:22.928",
     youtube: "https://discord.com/channels/1537180964319399978/1542545545070121010/1560397251438977065",
   },
   {
@@ -731,5 +731,26 @@ export const laps: Lap[] = [
     car: "f25",
     time: "1:11:422",
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1561451793370710028",
+  },
+  {
+    driver: "Pedro098T",
+    track: "zandvoort",
+    car: "f26",
+    time: "1:05.972",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1545890779929509940",
+  },
+  {
+    driver: "Pedro098T",
+    track: "turkey",
+    car: "f26",
+    time: "1:09.468",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1561373302520418424",
+  },
+  {
+    driver: "Pedro098T",
+    track: "vegas",
+    car: "f26",
+    time: "1:24.598",
+    youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1551241131487137812",
   },
 ];
