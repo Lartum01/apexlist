@@ -111,7 +111,7 @@ export const laps: Lap[] = [
     youtube: "https://discord.com/channels/547778156958973952/658830680033329152/1552378440483733607",
   },
   {
-    driver: "Pokonal0",
+    driver: "Pokonald0",
     track: "zandvoort",
     car: "f26",
     time: "1:05.915",
