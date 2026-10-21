@@ -6,13 +6,18 @@ export function Layout({ children }: { children: ReactNode }) {
     <div className="layout">
       <header className="site-header">
         <NavLink to="/" className="brand">
-          Formula Apex Laptime List
+          <span className="brand-mark" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span>Formula Apex Laptime List</span>
         </NavLink>
         <nav className="primary-nav">
           <NavLink to="/" end>
             Home
           </NavLink>
-          <NavLink to="/global">Global Leaderboard</NavLink>
+          <NavLink to="/global">Leaderboard</NavLink>
           <NavLink className="submit-nav-link" to="/submit">
             Submit a Time
           </NavLink>
