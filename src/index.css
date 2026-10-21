@@ -524,7 +524,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  align-self: center;
+  align-self: stretch;
 }
 
 .track-location-panel {
@@ -547,6 +547,8 @@ a:hover {
 
 .track-rating-grid {
   display: grid;
+  flex: 1;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -909,6 +911,15 @@ tbody tr:nth-child(even) {
 
   .track-info-layout {
     grid-template-columns: 1fr;
+  }
+
+  .track-stats-panel {
+    align-self: auto;
+  }
+
+  .track-rating-grid {
+    flex: initial;
+    grid-template-rows: none;
   }
 
   .track-layout-panel {
