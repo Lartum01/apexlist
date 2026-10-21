@@ -1,13 +1,17 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { laps } from "../data/laps";
 import { tracks } from "../data/tracks";
 import { getGlobalLeaderboard } from "../utils/leaderboard";
 import { GlobalPage } from "./GlobalPage";
 
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
 describe("GlobalPage", () => {
-  it("renders ranked rows and hides zero-point track pills without changing totals", () => {
+  it("renders ranked rows and hides zero-point track pills without changing totals", async () => {
     const rows = getGlobalLeaderboard(laps);
     const row = rows.find((item) =>
       item.perTrack.some((track) => track.points > 0) &&
@@ -15,6 +19,14 @@ describe("GlobalPage", () => {
     );
     expect(row).toBeDefined();
     expect(row?.perTrack).toHaveLength(tracks.length);
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          avatars: [{ username: row!.driver, url: "https://tr.rbxcdn.com/avatar.png" }],
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      )
+    );
 
     const { container } = render(
       <MemoryRouter>
@@ -39,5 +51,15 @@ describe("GlobalPage", () => {
       screen.queryByRole("link", { name: `${zeroTrack.name}: ${zeroTrack.pointsLabel}` })
     ).not.toBeInTheDocument();
 
+    expect(fetchMock).toHaveBeenCalledWith(
+      expect.stringContaining(`/api/roblox-avatars?username=${encodeURIComponent(row!.driver)}`),
+      expect.objectContaining({ signal: expect.any(AbortSignal) })
+    );
+    await waitFor(() => {
+      expect(container.querySelector(".driver-avatar-image")).toHaveAttribute(
+        "src",
+        "https://tr.rbxcdn.com/avatar.png"
+      );
+    });
   });
 });

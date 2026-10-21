@@ -1,10 +1,29 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { laps } from "../data/laps";
 import { getGlobalLeaderboard } from "../utils/leaderboard";
+import { fetchRobloxAvatars } from "../utils/robloxAvatars";
 
 export function GlobalPage() {
   const rows = useMemo(() => getGlobalLeaderboard(laps), []);
+  const [avatarUrls, setAvatarUrls] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    fetchRobloxAvatars(
+      rows.map((row) => row.driver),
+      controller.signal
+    )
+      .then(setAvatarUrls)
+      .catch((error: unknown) => {
+        if (!controller.signal.aborted) {
+          console.error("Unable to load Roblox driver avatars:", error);
+        }
+      });
+
+    return () => controller.abort();
+  }, [rows]);
 
   return (
     <div className="page global-page">
@@ -36,6 +55,18 @@ export function GlobalPage() {
                   <span className="rank-number">{row.rank}</span>
                 </div>
                 <div className="driver-avatar" aria-hidden="true">
+                  {avatarUrls[row.driver.toLowerCase()] && (
+                    <img
+                      className="driver-avatar-image"
+                      src={avatarUrls[row.driver.toLowerCase()]}
+                      alt=""
+                      loading="lazy"
+                      onError={(event) => {
+                        console.error(`Roblox avatar image failed to load for ${row.driver}`);
+                        event.currentTarget.style.display = "none";
+                      }}
+                    />
+                  )}
                   <svg viewBox="0 0 64 64" focusable="false">
                     <circle cx="32" cy="21" r="12" />
                     <path d="M9 57c0-11.6 10.3-19 23-19s23 7.4 23 19v2H9z" />
